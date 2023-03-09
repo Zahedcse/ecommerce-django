@@ -1,0 +1,21 @@
+<header>
+    <div class="container px-4 px-lg-5 my-5">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="true">            
+                <div class="carousel-inner">
+                    {% for banner in banners %}
+                        <div class="carousel-item {% if forloop.first %} active{% endif %}">
+                            <img src="{{ banner.image.url }}" class="d-block w-100 h-50" alt="...">
+                        </div>
+                    {% endfor %}
+                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</header>
