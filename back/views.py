@@ -85,3 +85,12 @@ def increase_quantity(request, id):
         return redirect('cart')
     else:
         return redirect(reverse('user_login'))
+
+
+def search_results(request):
+    if request.method == 'POST':
+        search = request.POST['search']
+        products = Product.objects.filter(name__contains=search)
+        return render(request, 'front/index.html', {'products': products})
+    else:
+        return render(request, 'front/index.html')

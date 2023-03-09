@@ -9,5 +9,6 @@ urlpatterns = [
     path('decrease_quantity/<int:id>',
          decrease_quantity, name='decrease_quantity'),
     path('increase_quantity/<int:id>',
-         increase_quantity, name='increase_quantity')
+         increase_quantity, name='increase_quantity'),
+    path('search/', search_results, name='search_results'),
 ]
